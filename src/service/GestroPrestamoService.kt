@@ -7,7 +7,7 @@ import model.Prestamo
 class GestorPrestamosService {
 
     fun procesarPrestamo(prestamo: Prestamo): EstadoPrestamo {
-        Thread.sleep(3000) // Reemplaza delay() por sleep()
+        Thread.sleep(3000)
         return if (prestamo.libro is LibroFisico && prestamo.libro.esReferencia) {
             EstadoPrestamo.Error("No se puede prestar un libro de referencia")
         } else {
